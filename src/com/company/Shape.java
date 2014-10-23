@@ -9,6 +9,8 @@ abstract class Shape {
             return new Circle();
         if (type.equals("Square"))
             return new Square();
+        if (type.equals("Triangle"))
+            return new Triangle();
         throw new RuntimeException(
                 "Bad shape creation: " + type);
     }
@@ -33,5 +35,16 @@ class Square extends Shape {
     }
     public void erase() {
         System.out.println("Square.erase");
+    }
+}
+
+class Triangle extends Shape {
+    Triangle() {
+    } // Package-access constructor
+    public void draw() {
+        System.out.println("Triangle.draw");
+    }
+    public void erase() {
+        System.out.println("Triangle.erase");
     }
 }
