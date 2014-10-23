@@ -1,10 +1,12 @@
 package com.company;
 
+import java.util.Calendar;
+
 public class President {
     private static President p;
     private int age;
     // constructor is private!
-    private President(int age) {
+    public President(int age) {
         this.age = age;
     }
     public static President getPresident() {
@@ -16,5 +18,16 @@ public class President {
     }
     public void setAge(int age) {
         this.age = age;
+    }
+}
+
+class PresidentAdapter extends President implements Person{
+    public int rok;
+    President p = President.getPresident();
+
+    public int getYearOfBirth() {
+        int year = Calendar.getInstance().get(Calendar.YEAR);
+        rok = year - p.getAge();
+        return rok;
     }
 }

@@ -1,5 +1,6 @@
 package com.company;
 
+//president
 /*public class Main {
 
     public static void main(String[] args) {
@@ -11,10 +12,11 @@ package com.company;
     }
 }*/
 
-import java.util.*;
+//shape
+/*import java.util.*;
 public class Main {
     public static void main(String[] args) {
-        String shapeList[] = {"Circle", "Square", "Square", "Circle", "Circle", "Square", "Triangle"};
+        String shapeList[] = {"Circle", "Square", "Triangle"};
         List<Shape> shapes = new ArrayList();
         for (String s : shapeList) {
             shapes.add(Shape.create(s));
@@ -25,5 +27,14 @@ public class Main {
             s.draw();
             s.erase();
         }
+    }
+}*/
+
+//adapter
+public class Main {
+
+    public static void main(String[] args) {
+        Person person = new PresidentAdapter();
+        System.out.println(person.getYearOfBirth());
     }
 }
